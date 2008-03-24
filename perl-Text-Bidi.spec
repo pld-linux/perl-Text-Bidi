@@ -1,12 +1,12 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	Bidi
 Summary:	Text::Bidi - Unicode bidi algorithm using libfribidi
+Summary(pl.UTF-8):	Text::Bidi - algorytm Unicode bidi z użyciem libfribidi
 Name:		perl-Text-Bidi
 Version:	0.03
 Release:	1
@@ -19,15 +19,19 @@ URL:		http://search.cpan.org/dist/Text-Bidi/
 BuildRequires:	fribidi-devel >= 0.10.9
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with autodeps} || %{with tests}
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a perl interface to the libfribidi library that implements the
+This is a Perl interface to the libfribidi library that implements the
 Unicode bidi algorithm. The bidi algorithm is a specification for
 displaying text that consists of both left-to-right and right-to-left
 written languages.
+
+%description -l pl.UTF-8
+Ten moduł jest perlowym interfejsem do biblioteki libfribidi
+implementującej algorytm Unicode bidi. Algorytm bidi jest specyfikacją
+wyświetlania tekstu zawierającego tekst zarówno w językach pisanych od
+lewej do prawej, jak i od prawej do lewej.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
