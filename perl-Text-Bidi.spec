@@ -62,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Text/Bidi/*.pm
 %dir %{perl_vendorarch}/auto/Text/Bidi
 %dir %{perl_vendorarch}/auto/Text/Bidi/private
-%{perl_vendorarch}/auto/Text/Bidi/private/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Text/Bidi/private/*.so
 %{_mandir}/man3/Text::Bidi.3pm*
 %{_mandir}/man3/Text::Bidi::CapRTL.3pm*
