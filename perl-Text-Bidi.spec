@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	Bidi
 Summary:	Text::Bidi - Unicode bidi algorithm using libfribidi
